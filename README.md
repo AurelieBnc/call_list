@@ -5,4 +5,5 @@ page utilisant des API pour créer une liste d'appels téléphoniques
 ```
 composer install
 php bin/console assets:install public
+composer require symfony/http-client
 ```

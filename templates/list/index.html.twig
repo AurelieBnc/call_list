@@ -3,6 +3,7 @@
 {% block title %}Liste d'appel{% endblock %}
 
 {% block body %}
+
 <style>
 
 </style>
@@ -10,13 +11,27 @@
 <div>
     <h1>Liste des appels </h1>
 
+
+            <div>Test : {{contacts.data.0.firstName}}</div>
+
+        <br>
         <ul class="list-group list-group-flush">
-            <li class="list-group-item">An item</li>
-            <li class="list-group-item">A second item</li>
-            <li class="list-group-item">A third item</li>
-            <li class="list-group-item">A fourth item</li>
-            <li class="list-group-item">And a fifth one</li>
-        </ul>
+        {% for contact in contacts.data %}
+            <li class="list-group-item">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-header">
+                        {{contact.title}}{{contact.firstName}} {{contact.lastName}}
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Compte lié :{{contact.accountId}}</li>
+                        <li class="list-group-item">Email : {{contact.email}}</li>
+                        <li class="list-group-item">Téléphone : {{contact.phone}}</li>
+                        <li class="list-group-item">Mobile :{{contact.mobile}}</li>
+                    </ul>
+                  </div>
+
+            </li>
+        {% endfor %}
 
 </div>
 {% endblock %}
