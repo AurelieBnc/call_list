@@ -4,18 +4,17 @@
 
 {% block body %}
 
-<style>
-
-</style>
 
 <div>
-    <h1>Liste des appels </h1>
+
+    <h1 class="mt-5 text-center">Liste des appels </h1>
 
 
-            <div>Test : {{contacts.data.0.firstName}}</div>
+        <div class="mx-3" >Test Nom contact: {{contacts.data.0.firstName}}</div>
+        {# <div>Test reponse OVH: {{ test }}</div> #}
 
-        <br>
-        <ul class="list-group list-group-flush">
+
+        <ul class="list-group list-group-flush mt-3">
         {% for contact in contacts.data %}
             <li class="list-group-item">
                 <div class="card" style="width: 18rem;">
@@ -28,7 +27,7 @@
                         <li class="list-group-item">Téléphone : {{contact.phone}}</li>
                         <li class="list-group-item">Mobile :{{contact.mobile}}</li>
                     </ul>
-                  </div>
+                </div>
 
             </li>
         {% endfor %}
