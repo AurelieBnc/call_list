@@ -10,7 +10,7 @@ composer require ovh/ovh
 php composer.phar install
 ```
 
-### required
+### requis
 ```
 Pour Api Ovh dans php.ini : curl.cainfo = <absolute_path_to> cacert.pem
 ```
